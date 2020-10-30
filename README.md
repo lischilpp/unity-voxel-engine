@@ -1,4 +1,5 @@
 # UnityVoxelEngine
+### A voxel engine written in C# using Unity3D
 
 ## Features
 - Fixed size spherical chunk loading
