@@ -2,7 +2,7 @@
 
 ## Features
 - Fixed size spherical chunk loading
-- Support for transparent materials (like glass) and connected materials (like water)
+- Support for transparent materials (like glass) and connected blocks (like water)
 - Different block types
 - Terrain generator from noise
 - Place and destroy blocks (right and left click)
