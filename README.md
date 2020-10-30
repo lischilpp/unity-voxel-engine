@@ -2,10 +2,10 @@
 
 ## Features
 - Fixed size spherical chunk loading
-- support for transparent materials (like glass) and connected materials (like water)
-- different block types
-- terrain generator from noise
-- fast block destroying (press and hold **f** key)
+- Support for transparent materials (like glass) and connected materials (like water)
+- Different block types
+- Terrain generator from noise
+- Fast block destroying (press and hold **f** key)
 
 ## Screenshots
 ![screenshot1.png](screenshots/screenshot1.png)
