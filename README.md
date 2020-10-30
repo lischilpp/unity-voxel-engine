@@ -5,6 +5,7 @@
 - Support for transparent materials (like glass) and connected materials (like water)
 - Different block types
 - Terrain generator from noise
+- Place and destroy blocks (right and left click)
 - Fast block destroying (press and hold **f** key)
 
 ## Screenshots
