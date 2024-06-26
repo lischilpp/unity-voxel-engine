@@ -5,12 +5,13 @@ using System.Collections.Generic;
 public class PlayerController : MonoBehaviour {
 
 	public bool freeFlyMode;
-	public float moveSpeed = 1;
+	public float moveSpeed = 0.1f;
 
 	public static GameObject playerGO;
 	
 	void Start () {
-		playerGO = GameObject.Find ("Player");
+		playerGO = GameObject.Find("Player");
+		Debug.Log(playerGO);
 		playerGO.SetActive(false);
 	}
 
@@ -24,34 +25,36 @@ public class PlayerController : MonoBehaviour {
 				playerGO.transform.position = new Vector3(
 					playerGO.transform.position.x + playerGO.transform.forward.x * moveSpeed,
 					playerGO.transform.position.y,
-					playerGO.transform.position.z + playerGO.transform.forward.z * moveSpeed
-				);
+					playerGO.transform.position.z + playerGO.transform.forward.z * moveSpeed);
 			}
 			if (Input.GetKey(KeyCode.A)) {
 				playerGO.transform.position = new Vector3(
 					playerGO.transform.position.x - playerGO.transform.right.x * moveSpeed,
 					playerGO.transform.position.y,
-					playerGO.transform.position.z - playerGO.transform.right.z * moveSpeed
-				);
+					playerGO.transform.position.z - playerGO.transform.right.z * moveSpeed);
 			}
 			if (Input.GetKey(KeyCode.S)) {
 				playerGO.transform.position = new Vector3(
 					playerGO.transform.position.x - playerGO.transform.forward.x * moveSpeed,
 					playerGO.transform.position.y,
-					playerGO.transform.position.z - playerGO.transform.forward.z * moveSpeed
-				);
+					playerGO.transform.position.z - playerGO.transform.forward.z * moveSpeed);
 			}
 			if (Input.GetKey(KeyCode.D)) {
 				playerGO.transform.position = new Vector3(
 					playerGO.transform.position.x + playerGO.transform.right.x * moveSpeed,
 					playerGO.transform.position.y,
-					playerGO.transform.position.z + playerGO.transform.right.z * moveSpeed
-					);
+					playerGO.transform.position.z + playerGO.transform.right.z * moveSpeed);
 			}
 			if (Input.GetKey(KeyCode.Space)) {
-				playerGO.transform.position = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y + 1, playerGO.transform.position.z);
+				playerGO.transform.position = new Vector3(
+					playerGO.transform.position.x,
+					playerGO.transform.position.y + playerGO.transform.up.y * moveSpeed,
+					playerGO.transform.position.z);
 			}else if (Input.GetKey(KeyCode.LeftShift)) {
-				playerGO.transform.position = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y - 1, playerGO.transform.position.z);
+				playerGO.transform.position = new Vector3(
+					playerGO.transform.position.x,
+					playerGO.transform.position.y - playerGO.transform.up.y * moveSpeed,
+					playerGO.transform.position.z);
 			}
 		}
 	}
