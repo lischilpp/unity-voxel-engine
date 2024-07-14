@@ -1,78 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
     public Camera playerCamera;
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
-    public float jumpPower = 7f;
+    public float movementSpeed = 5f;
+    public float jumpHeight = 2f;
     public float gravity = 9.81f;
- 
- 
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
- 
- 
-    Vector3 moveDirection = Vector3.zero;
+
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private bool isGrounded;
+
     float rotationX = 0;
- 
-    public bool canMove = true;
- 
-   
-    CharacterController characterController;
-    void Start()
+
+    private void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
- 
-    void Update()
+
+    private void Update()
     {
-        UpdateMovement();
-        UpdateJumping();
-        UpdateRotation();
-    }
+        isGrounded = controller.isGrounded;
 
-    void UpdateMovement() {
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
- 
-        // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-    }
+        if (isGrounded && playerVelocity.y < 0)
+        {
+            playerVelocity.y = 0f;
+        }
 
-    void UpdateJumping() {
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
-        {
-            moveDirection.y = jumpPower;
-        }
-        else
-        {
-            moveDirection.y = moveDirection.y;
-        }
- 
-        if (!characterController.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
-    }
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
 
-    void UpdateRotation() {
-        characterController.Move(moveDirection * Time.deltaTime);
- 
-        if (canMove)
+        Vector3 move = transform.right * moveX + transform.forward * moveZ;
+        controller.Move(move * movementSpeed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            playerVelocity.y = Mathf.Sqrt(jumpHeight * 2f * gravity);
         }
+
+        // Camera rotation
+        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+
+        // Apply gravity
+        playerVelocity.y -= gravity * Time.deltaTime;
+
+
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
