@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ModifyTerrain : MonoBehaviour {
 	
-	public GameObject cameraGO;
+	public static GameObject cameraGO;
 
 	void Start() {
 		cameraGO = GameObject.FindGameObjectWithTag("MainCamera");

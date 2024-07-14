@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class FPSController : MonoBehaviour
+public class FPController : MonoBehaviour
 {
-    public Camera playerCamera;
+    public static Camera playerCamera;
     public float movementSpeed = 5f;
     public float jumpHeight = 0.8f;
     public float gravity = 9.81f;
@@ -13,6 +13,8 @@ public class FPSController : MonoBehaviour
     public float lookXLimit = 45f;
     public bool freeFlyMode = false;
     public float freeFlySpeedMultiplier = 4f;
+
+    public bool canMove = false;
 
     private CharacterController controller;
     private Vector3 playerVelocity;
@@ -22,6 +24,7 @@ public class FPSController : MonoBehaviour
 
     private void Start()
     {
+        playerCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -29,6 +32,10 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        if (!canMove)
+        {
+            return;
+        }
         UpdateMovement();
         UpdateCameraRotation();
     }

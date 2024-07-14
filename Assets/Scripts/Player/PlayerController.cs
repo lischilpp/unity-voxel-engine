@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
-	public static GameObject playerGO;
-	
+	public static FPController fpController;
+
 	void Start () {
-		playerGO = GameObject.Find("Player");
-		playerGO.SetActive(false);
+		GameObject playerGO = GameObject.Find("Player");
+		fpController = playerGO.GetComponent<FPController>();
 	}
 	
 	public static void Spawn() {
-		playerGO.SetActive(true);
+		fpController.canMove = true;
 		PlayerOptions.playerSpawned = true;
 	}
 }
