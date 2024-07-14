@@ -7,6 +7,12 @@
 - [<code>📦 Getting started</code>](#-getting-started)
 - [<code>📝 License</code>](#-license)
 
+## 🖼️ Screenshots
+<p>
+  <img src="screenshots/screenshot1.png" width="500px" alt="screenshot1" />
+  <img src="screenshots/screenshot2.png" width="500px" alt="screenshot2" />
+</p>
+
 ## 📋 Features
 - Fixed size spherical chunk loading
 - Support for transparent materials (like glass) and connected blocks (like water)
@@ -14,12 +20,6 @@
 - Terrain generator from noise
 - Place and destroy blocks (right and left click)
 - Fast block destroying (press and hold **f** key)
-
-## 🖼️ Screenshots
-<p>
-  <img src="screenshots/screenshot1.png" width="500px" alt="screenshot1" />
-  <img src="screenshots/screenshot2.png" width="500px" alt="screenshot2" />
-</p>
 
 ## 📦 Getting Started
 1. Clone this repository and open it in Unity3D
