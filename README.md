@@ -2,8 +2,8 @@
 ### A voxel engine written in C# using Unity3D
 
 ## 🗺️ Navigation 
-- [<code>📋 Features</code>](#-features)
 - [<code>🖼️ Screenshots</code>](#-screenshots)
+- [<code>📋 Features</code>](#-features)
 - [<code>📦 Getting started</code>](#-getting-started)
 - [<code>📝 License</code>](#-license)
 
