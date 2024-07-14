@@ -7,7 +7,7 @@ public class FPSController : MonoBehaviour
 {
     public Camera playerCamera;
     public float movementSpeed = 5f;
-    public float jumpHeight = 1f;
+    public float jumpHeight = 0.8f;
     public float gravity = 9.81f;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -42,7 +42,7 @@ public class FPSController : MonoBehaviour
 
         if (Input.GetButton("Jump") && isGrounded)
         {
-            playerVelocity.y = Mathf.Sqrt(jumpHeight * gravity);
+            playerVelocity.y = Mathf.Sqrt(2 * jumpHeight * gravity);
         }
 
         // Camera rotation
