@@ -9,11 +9,15 @@
   <p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/" target="_blank">Live Demo</a></p>
 </div>
 
-## 🗺️ Navigation 
-- [<code>🖼️ Screenshots</code>](#%EF%B8%8F-screenshots)
-- [<code>📋 Features</code>](#-features)
-- [<code>📦 Getting started</code>](#-getting-started)
-- [<code>📝 License</code>](#-license)
+<details>
+  <summary>Table of Contents</summary>
+  <ul>
+    <li><a href="#%EF%B8%8F-screenshots">🖼️ Screenshots</a></li>
+    <li><a href="#-features">📋 Features</a></li>
+    <li><a href="#-getting-started">📦 Getting started</a></li>
+    <li><a href="#-license">📝 License</a></li>
+  </ul>
+</details>
 
 ## 🖼️ Screenshots
 <table>
