@@ -3,9 +3,13 @@
 </p>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white"></img>
-  <img src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=white"></img>
+  
+  <img src="logo.png" alt="Logo" width="100" height="100">
   <h1>Unity Voxel Engine</h1>
+  <p>
+    <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white"></img>
+    <img src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=white"></img>
+  </p>
   
   An interactive Voxel Engine
   
@@ -13,16 +17,18 @@
 </div>
 
 ## 🗺️ Navigation 
-- [<code>🖼️ Screenshots</code>](#-screenshots)
+- [<code>🖼️ Screenshots</code>](#%EF%B8%8F-screenshots)
 - [<code>📋 Features</code>](#-features)
 - [<code>📦 Getting started</code>](#-getting-started)
 - [<code>📝 License</code>](#-license)
 
 ## 🖼️ Screenshots
-<p>
-  <img src="screenshots/screenshot1.png" width="500px" alt="screenshot1" />
-  <img src="screenshots/screenshot2.png" width="500px" alt="screenshot2" />
-</p>
+<table>
+  <tr>
+    <td><img src="screenshots/screenshot1.png" width="500px" alt="screenshot1" /></td>
+    <td><img src="screenshots/screenshot2.png" width="500px" alt="screenshot2" /></td>
+  </tr>
+</table>
 
 ## 📋 Features
 - Fixed size spherical chunk loading
