@@ -1,18 +1,11 @@
-<p align="left">
-
-</p>
-
 <div align="center">
-  
   <img src="logo.png" alt="Logo" width="100" height="100">
   <h1>Unity Voxel Engine</h1>
   <p>
     <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white"></img>
     <img src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=white"></img>
   </p>
-  
   An interactive Voxel Engine
-  
   <p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/" target="_blank">Live Demo</a></p>
 </div>
 
