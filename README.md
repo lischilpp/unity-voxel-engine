@@ -1,7 +1,16 @@
-# Unity Voxel Engine
-### A voxel engine written in C# using Unity3D
+<p align="left">
 
-<p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/" target="_blank">Live Demo</a></p>
+</p>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white"></img>
+  <img src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=white"></img>
+  <h1>Unity Voxel Engine</h1>
+  
+  An interactive Voxel Engine
+  
+  <p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/" target="_blank">Live Demo</a></p>
+</div>
 
 ## 🗺️ Navigation 
 - [<code>🖼️ Screenshots</code>](#-screenshots)
