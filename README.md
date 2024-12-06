@@ -12,14 +12,14 @@
 <details>
   <summary>Table of Contents</summary>
   <ul>
-    <li><a href="#%EF%B8%8F-screenshots">🖼️ Screenshots</a></li>
-    <li><a href="#-features">📋 Features</a></li>
-    <li><a href="#-getting-started">📦 Getting started</a></li>
-    <li><a href="#-license">📝 License</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#license">License</a></li>
   </ul>
 </details>
 
-## 🖼️ Screenshots
+## Screenshots
 <table>
   <tr>
     <td><img src="screenshots/screenshot1.png" width="500px" alt="screenshot1" /></td>
@@ -27,7 +27,7 @@
   </tr>
 </table>
 
-## 📋 Features
+## Features
 - Fixed size spherical chunk loading
 - Support for transparent materials (like glass) and connected blocks (like water)
 - Different block types
@@ -35,10 +35,10 @@
 - Place and destroy blocks (right and left click)
 - Fast block destroying (press and hold **f** key)
 
-## 📦 Getting Started
+## Getting Started
 1. Clone this repository and open it in Unity3D
 2. Open the scene "Main" from Assets
 5. Press play and have fun!
 
-## 📝 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+## License
+This project is distributed under the MIT License - see the [LICENSE](LICENSE) file for details
