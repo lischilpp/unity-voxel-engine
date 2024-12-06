@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=white"></img>
   </p>
   <p>An interactive Voxel Engine</p>
-  <p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/" target="_blank">Live Demo</a></p>
+  <p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/">Live Demo</a></p>
 </div>
 
 <details>
