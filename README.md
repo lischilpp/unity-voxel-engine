@@ -9,15 +9,11 @@
   <p><a href="https://lischilpp.github.io/unity-voxel-engine-demo/">Live Demo</a></p>
 </div>
 
-<details>
-  <summary>Table of Contents</summary>
-  <ul>
-    <li><a href="#screenshots">Screenshots</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#getting-started">Getting started</a></li>
-    <li><a href="#license">License</a></li>
-  </ul>
-</details>
+## Table of Contents
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Getting started](#getting-started)
+- [License](#license)
 
 ## Screenshots
 <table>
